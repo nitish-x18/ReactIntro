@@ -29,19 +29,19 @@ const App = () => {
   //   </div>
   // )
 
-  const [a, setA] = useState(0);
+  // const [a, setA] = useState(0);
 
-  const increment = ()=>{
-    setA(a+10)
-  }
+  // const increment = ()=>{
+  //   setA(a+10)
+  // }
 
-  return (
-    <div>
-      <h3>Number is: {a}</h3>
-      <button onClick={increment}>Increment</button>
-      <button onClick={()=>setA(a-10)}>Decrement</button>
-    </div>
-  )
+  // return (
+  //   <div>
+  //     <h3>Number is: {a}</h3>
+  //     <button onClick={increment}>Increment</button>
+  //     <button onClick={()=>setA(a-10)}>Decrement</button>
+  //   </div>
+  // )
 }
 
 export default App
