@@ -1,0 +1,23 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "JetBrains Mono", monospace;
+}
+html,
+body{
+  height: 100%;
+  width: 100%;
+}
+
+body{
+  background-color: black;
+  color: white;
+}
+
+button{
+  background-color: greenyellow;
+  border-radius: 8px;
+  margin: 15px;
+  padding: 8px;
+}
