@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+import Navbar from './components/Navbar'
+import Footer from './components/Footer'
 
 const App = () => {
 
@@ -50,7 +52,7 @@ const App = () => {
   //   </div>
   // )
 
-  
+
   // //FORM HANDLING--->>>
   // const [userName, setuserName] = useState('')
 
@@ -79,6 +81,23 @@ const App = () => {
   //   </div>
   // )
 
+  //FRAGMENTS--->>>
+  // return (
+  //   <>
+  //     <h1>1</h1>
+  //     <h2>2</h2>
+  //     <h3>3</h3>
+  //     <h6>inside the fragment we return multiple tags</h6>
+  //   </>
+  // )
+
+  //COMPONENTS--->>>
+  return (
+    <>
+      <Navbar />
+      <Footer />
+    </>
+  )
 }
 
 export default App
