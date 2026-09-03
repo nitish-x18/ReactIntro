@@ -42,6 +42,14 @@ const App = () => {
   //     <button onClick={()=>setA(a-10)}>Decrement</button>
   //   </div>
   // )
+
+  return (
+    <div>
+      <h1 className='bg-pink-700 text-xl'>Jai Mata Di</h1>
+      <h2>Hello Guysss</h2>
+    </div>
+  )
+
 }
 
 export default App
