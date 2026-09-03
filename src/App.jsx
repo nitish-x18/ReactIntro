@@ -43,12 +43,14 @@ const App = () => {
   //   </div>
   // )
 
-  return (
-    <div>
-      <h1 className='bg-pink-700 text-xl'>Jai Mata Di</h1>
-      <h2>Hello Guysss</h2>
-    </div>
-  )
+  // return (
+  //   <div>
+  //     <h1 className='bg-pink-700 text-xl'>Jai Mata Di</h1>
+  //     <h2>Hello Guysss</h2>
+  //   </div>
+  // )
+
+  
 
 }
 
