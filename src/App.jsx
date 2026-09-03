@@ -51,33 +51,33 @@ const App = () => {
   // )
 
   
-  //FORM HANDLING--->>>
-  const [userName, setuserName] = useState('')
+  // //FORM HANDLING--->>>
+  // const [userName, setuserName] = useState('')
 
-  const submitHandler = (e)=>{
-    e.preventDefault()
+  // const submitHandler = (e)=>{
+  //   e.preventDefault()
 
-    console.log(userName)
-    console.log("Submitted")
+  //   console.log(userName)
+  //   console.log("Submitted")
 
-    setuserName('')
-  }
+  //   setuserName('')
+  // }
 
-  return (
-    <div>
-      <form onSubmit={(e)=>{
-        submitHandler(e)
-      }}>
-        <input 
-        value={userName}
-        onChange={(e)=>{
-          setuserName(e.target.value)
-        }}
-        className="px-2 py-4 m-4 font-semibold bg-blue-50 rounded text-black" type="text" placeholder='Enter Your Name'/>
-        <button className='px-2 py-2 text-xl font-bold bg-emerald-400 rounded flex m-4 text-black'>Submit</button>
-      </form>
-    </div>
-  )
+  // return (
+  //   <div>
+  //     <form onSubmit={(e)=>{
+  //       submitHandler(e)
+  //     }}>
+  //       <input 
+  //       value={userName}
+  //       onChange={(e)=>{
+  //         setuserName(e.target.value)
+  //       }}
+  //       className="px-2 py-4 m-4 font-semibold bg-blue-50 rounded text-black" type="text" placeholder='Enter Your Name'/>
+  //       <button className='px-2 py-2 text-xl font-bold bg-emerald-400 rounded flex m-4 text-black'>Submit</button>
+  //     </form>
+  //   </div>
+  // )
 
 }
 
