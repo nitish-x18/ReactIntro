@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
+import Card from './components/Card'
 
 const App = () => {
 
@@ -99,7 +100,62 @@ const App = () => {
   //   </>
   // )
 
-  
+  // const name = "Nitish"
+
+  // return (
+  //   <>
+  //     <Card username={name}/>
+  //     <Card username='harsh'/>
+  //   </>
+  // )
+
+  const users = [
+  {
+    "name": "Rahul Sharma",
+    "age": 24,
+    "city": "Chandigarh",
+    "profileimage": "https://i.pravatar.cc/150?img=12",
+    "profession": "Software Developer"
+  },
+  {
+    "name": "Priya Singh",
+    "age": 22,
+    "city": "Delhi",
+    "profileimage": "https://i.pravatar.cc/150?img=47",
+    "profession": "UI/UX Designer"
+  },
+  {
+    "name": "Arjun Verma",
+    "age": 27,
+    "city": "Mumbai",
+    "profileimage": "https://i.pravatar.cc/150?img=11",
+    "profession": "Backend Developer"
+  },
+  {
+    "name": "Sneha Kapoor",
+    "age": 25,
+    "city": "Bangalore",
+    "profileimage": "https://i.pravatar.cc/150?img=44",
+    "profession": "Product Manager"
+  },
+  {
+    "name": "Vikash Kumar",
+    "age": 23,
+    "city": "Pune",
+    "profileimage": "https://i.pravatar.cc/150?img=33",
+    "profession": "Frontend Developer"
+  }
+]
+
+  return(
+    <>
+      <div className='p-10'>
+        {users.map(function(elem, ind){
+          return <Card key={ind} name={elem.name} age={elem.age} city={elem.city} profileimg={elem.profileimage} prof={elem.profession}/>
+        })}
+      </div>
+    </>
+  )
 
 
 }
