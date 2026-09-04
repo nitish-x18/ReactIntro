@@ -158,37 +158,37 @@ const App = () => {
   //     </>
   //   )
 
-  // DATA HANDLING USING API--->>>
-  const [data, setData] = useState([])
+  // // DATA HANDLING USING API--->>>
+  // const [data, setData] = useState([])
 
-  const getData = async function(){
-    const response = await axios.get("https://picsum.photos/v2/list?page=2&limit=100")
-    // console.log(response)
-    setData(response.data)
-    console.log(data)
-  }
+  // const getData = async function(){
+  //   const response = await axios.get("https://picsum.photos/v2/list?page=2&limit=100")
+  //   // console.log(response)
+  //   setData(response.data)
+  //   console.log(data)
+  // }
 
-  //show data without using onClick event-->>
-  // useEffect(() => {
-  //   getData()
-  // }, [])
+  // //show data without using onClick event-->>
+  // // useEffect(() => {
+  // //   getData()
+  // // }, [])
   
 
-  return (
-    <>
-      <div className='m-8'>
-        <button onClick={getData}className='bg-emerald-950 text-white rounded px-5 py-3 active:scale-90'>Get Data</button>
-        <div className='p-8 bg-gray-950 mt-2'>
-          {data.map( (elem, idx)=>{
-            return <div key={idx}className='bg-gray-300 flex justify-between items-center p-2 rounded m-2'>
-              <img className='h-30'src="{elem.download_url}" alt="" />
-              <h1 className='text-black'>{elem.author}</h1>
-            </div>
-          })}
-        </div>
-      </div>
-    </>
-  )
+  // return (
+  //   <>
+  //     <div className='m-8'>
+  //       <button onClick={getData}className='bg-emerald-950 text-white rounded px-5 py-3 active:scale-90'>Get Data</button>
+  //       <div className='p-8 bg-gray-950 mt-2'>
+  //         {data.map( (elem, idx)=>{
+  //           return <div key={idx}className='bg-gray-300 flex justify-between items-center p-2 rounded m-2'>
+  //             <img className='h-30'src="{elem.download_url}" alt="" />
+  //             <h1 className='text-black'>{elem.author}</h1>
+  //           </div>
+  //         })}
+  //       </div>
+  //     </div>
+  //   </>
+  // )
 
 }
 
