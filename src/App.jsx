@@ -92,12 +92,16 @@ const App = () => {
   // )
 
   //COMPONENTS--->>>
-  return (
-    <>
-      <Navbar />
-      <Footer />
-    </>
-  )
+  // return (
+  //   <>
+  //     <Navbar />
+  //     <Footer />
+  //   </>
+  // )
+
+  
+
+
 }
 
 export default App
