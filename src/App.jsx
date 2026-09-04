@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import Card from './components/Card'
+import axios from 'axios'
 
 const App = () => {
 
@@ -109,54 +110,85 @@ const App = () => {
   //   </>
   // )
 
-//   const users = [
-//   {
-//     "name": "Rahul Sharma",
-//     "age": 24,
-//     "city": "Chandigarh",
-//     "profileimage": "https://i.pravatar.cc/150?img=12",
-//     "profession": "Software Developer"
-//   },
-//   {
-//     "name": "Priya Singh",
-//     "age": 22,
-//     "city": "Delhi",
-//     "profileimage": "https://i.pravatar.cc/150?img=47",
-//     "profession": "UI/UX Designer"
-//   },
-//   {
-//     "name": "Arjun Verma",
-//     "age": 27,
-//     "city": "Mumbai",
-//     "profileimage": "https://i.pravatar.cc/150?img=11",
-//     "profession": "Backend Developer"
-//   },
-//   {
-//     "name": "Sneha Kapoor",
-//     "age": 25,
-//     "city": "Bangalore",
-//     "profileimage": "https://i.pravatar.cc/150?img=44",
-//     "profession": "Product Manager"
-//   },
-//   {
-//     "name": "Vikash Kumar",
-//     "age": 23,
-//     "city": "Pune",
-//     "profileimage": "https://i.pravatar.cc/150?img=33",
-//     "profession": "Frontend Developer"
-//   }
-// ]
+  //   const users = [
+  //   {
+  //     "name": "Rahul Sharma",
+  //     "age": 24,
+  //     "city": "Chandigarh",
+  //     "profileimage": "https://i.pravatar.cc/150?img=12",
+  //     "profession": "Software Developer"
+  //   },
+  //   {
+  //     "name": "Priya Singh",
+  //     "age": 22,
+  //     "city": "Delhi",
+  //     "profileimage": "https://i.pravatar.cc/150?img=47",
+  //     "profession": "UI/UX Designer"
+  //   },
+  //   {
+  //     "name": "Arjun Verma",
+  //     "age": 27,
+  //     "city": "Mumbai",
+  //     "profileimage": "https://i.pravatar.cc/150?img=11",
+  //     "profession": "Backend Developer"
+  //   },
+  //   {
+  //     "name": "Sneha Kapoor",
+  //     "age": 25,
+  //     "city": "Bangalore",
+  //     "profileimage": "https://i.pravatar.cc/150?img=44",
+  //     "profession": "Product Manager"
+  //   },
+  //   {
+  //     "name": "Vikash Kumar",
+  //     "age": 23,
+  //     "city": "Pune",
+  //     "profileimage": "https://i.pravatar.cc/150?img=33",
+  //     "profession": "Frontend Developer"
+  //   }
+  // ]
 
-//   return(
-//     <>
-//       <div className='p-10'>
-//         {users.map(function(elem, ind){
-//           return <Card key={ind} name={elem.name} age={elem.age} city={elem.city} profileimg={elem.profileimage} prof={elem.profession}/>
-//         })}
-//       </div>
-//     </>
-//   )
+  //   return(
+  //     <>
+  //       <div className='p-10'>
+  //         {users.map(function(elem, ind){
+  //           return <Card key={ind} name={elem.name} age={elem.age} city={elem.city} profileimg={elem.profileimage} prof={elem.profession}/>
+  //         })}
+  //       </div>
+  //     </>
+  //   )
 
+  // DATA HANDLING USING API--->>>
+  const [data, setData] = useState([])
+
+  const getData = async function(){
+    const response = await axios.get("https://picsum.photos/v2/list?page=2&limit=100")
+    // console.log(response)
+    setData(response.data)
+    console.log(data)
+  }
+
+  //show data without using onClick event-->>
+  // useEffect(() => {
+  //   getData()
+  // }, [])
+  
+
+  return (
+    <>
+      <div className='m-8'>
+        <button onClick={getData}className='bg-emerald-950 text-white rounded px-5 py-3 active:scale-90'>Get Data</button>
+        <div className='p-8 bg-gray-950 mt-2'>
+          {data.map( (elem, idx)=>{
+            return <div key={idx}className='bg-gray-300 flex justify-between items-center p-2 rounded m-2'>
+              <img className='h-30'src="{elem.download_url}" alt="" />
+              <h1 className='text-black'>{elem.author}</h1>
+            </div>
+          })}
+        </div>
+      </div>
+    </>
+  )
 
 }
 
