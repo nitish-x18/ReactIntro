@@ -3,6 +3,11 @@ import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import Card from './components/Card'
 import axios from 'axios'
+import { Route, Routes } from 'react-router-dom'
+import About from './pages/About'
+import Home from './pages/Home'
+import Contact from './pages/Contact'
+import Header from './components/Header'
 
 const App = () => {
 
@@ -189,6 +194,18 @@ const App = () => {
   //     </div>
   //   </>
   // )
+
+  //REACT ROUTER DOM--->>>
+  return (
+    <div>
+      <Header />
+      <Routes>
+        <Route path='/' element={<Home />}/>
+        <Route path='/about' element={<About />}/>
+        <Route path='/contact' element={<Contact />}/>
+      </Routes>
+    </div>
+  )
 
 }
 
