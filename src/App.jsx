@@ -8,6 +8,8 @@ import About from './pages/About'
 import Home from './pages/Home'
 import Contact from './pages/Contact'
 import Header from './components/Header'
+import { DataContext } from './Context/userContext'
+import { useContext } from 'react'
 
 const App = () => {
 
@@ -206,6 +208,15 @@ const App = () => {
   //     </Routes>
   //   </div>
   // )
+
+  //CONTEXT API--->>>
+  const data = useContext(DataContext)
+
+  return (
+    <div>
+      <h2>This is APP {data}</h2>
+    </div>
+  )
 
 }
 
